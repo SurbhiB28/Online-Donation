@@ -1,0 +1,67 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+body {
+	background:black;
+}
+
+.header{
+	color:white;
+	height: auto;
+	width:100%;
+	position:sticky;
+	top:0px;
+	background:crimson;
+}
+.header , ul , li {
+	padding:0px 30px;
+}
+
+.header ,ul, li,a {
+	text-decoration: none;
+	display:inline-block;
+	text-align: right;
+	font-size:24px;
+	color:white;
+}
+
+.wrapper {
+	height:100vh;
+	background:#cecece;
+	margin-bottom:100px;
+}
+
+
+
+/*Register Page CSS*/
+
+#heading{
+	text-align: center;
+	color:white;
+}
+
+.register-box{
+	width:80%;
+	height:400px;
+	background:grey;
+	position:relative;
+	padding:0px;
+}
+
+
+.register-box-left{
+	position:absolute;
+	height:inherit;
+	width:50%;
+	background:orange;
+}
+
+.register-box-right{
+	position:absolute;
+	height:inherit;
+	width:50%;
+	background:red;
+	right:0px;
+}
