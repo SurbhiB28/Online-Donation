@@ -31,7 +31,8 @@ body {
 .wrapper {
 	height:auto;
 	background:#cecece;
-	z-index:3
+	z-index:3;
+	margin-bottom:200px
 }
 
 .about-image{
@@ -60,12 +61,6 @@ body {
 	z-index:3
 }
 
-.parallax {
-	height:50vh;
-	background:red;
-	z-index: -1;
-	
-}
 
 .transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
 .card {
@@ -203,18 +198,17 @@ body {
 .register-box-left{
 	position:absolute;
 	height:inherit;
-	width:50%;
+	width:40%;
 	background:orange;
 }
 
 .register-box-right{
 	position:absolute;
 	height:inherit;
-	width:50%;
+	width:40%;
 	background:red;
 	right:0px;
 }
-
 
 .global-container{
 	height:100%;
@@ -247,3 +241,9 @@ form{
 	text-align:center;
 	padding:20px 0 0;
 }
+
+
+
+
+/*Contact Us page*/
+

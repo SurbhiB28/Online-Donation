@@ -9,6 +9,7 @@
 <link href="Assets/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<section class="login">
 <h1 id="heading">Give and Love</h1>
 <div class="container register-box">
 	<div class="register-box-left">
@@ -39,6 +40,7 @@
 	</div>
 </div>
 </div>
+
 	</div>
 	<div class="register-box-right">
 	<div class="global-container">
@@ -70,5 +72,6 @@
 	</div>
 	
 </div>
+</section>
 </body>
 </html>
