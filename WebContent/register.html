@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading {
+	text-align: center;
+    font-family: serif;
+    font-size: 36px;
+    font-weight: 500;
+    text-shadow: 0px 2px 4px #172323;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  display: inline-block;
+    margin-right: 150px;
+    text-align: center;
+    margin-left: 160px;
+}
+
+.flip-card-inner {
+  position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* border: 4px solid blue; */
+    border-radius: 150px;
+    transition: transform 0.6s;
+    /* overflow: hidden; */
+    transform-style: preserve-3d;
+    box-shadow: 0px 10px 5px 1px rgb(66 58 58);
+}
+.avtar {
+
+width: 289px;
+    height: 295px;
+    /* overflow: hidden; */
+    border-radius: 150px;
+    /* text-align: center; */
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  border-radius: 30px;
+  color: white;
+  transform: rotateY(180deg);
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<h1 class="heading">JOIN US </h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img class="avtar" src="Assets/img/registersave.jpg" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+    
+      <form action="register.jsp" method="post">
+    
+  <h2>Register Form</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+</form>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img class="avtar" src="Assets/img/loginsave.jpg" alt="Avatar" style="width: 260px;
+    height: 260px;">
+    </div>
+    <div class="flip-card-back">
+      <form action="NewFile.jsp" style="max-width:500px;margin:auto">
+  <h2>Login Form</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+    <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
+  </div>
+
+  <button type="submit" class="btn">LOGIN</button>
+</form>
+
+    </div>
+  </div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
