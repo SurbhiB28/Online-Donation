@@ -7,18 +7,59 @@
 <title>Insert title here</title>
 
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
+        	<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" type="text/css" rel="stylesheet">
+	<link href="Assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="Assets/css/main.css" rel="stylesheet" type="text/css">
 <style>
 #show-cart , ul {
 	list-style:none;
 	color:black;
 }
+
+#show-cart , ul , li , a{
+color:black
+}
+
+.container-item-selection{
+box-shadow:0px 0px 7px 1px gold; 
+border-radius:10px;
+
+}
+
+
+.nav-ref{
+	color:white;
+}
 </style>
 </head>
 <body>
-<div class ="container">
-	<div class="row">
-		<div class="col-12-lg">
+
+ <header class="header"> 
+		
+	 <nav>
+			<ul>
+				<li><a class="nav-ref" href="Index.jsp">Home</a></li>
+				<li><a class="nav-ref" href="contact.jsp">Contact us</a></li>
+				<li><a  class="nav-ref" href="donatenow.jsp">Donate Now</a></li>
+				
+				<li><a class="nav-ref" href="register.html">Join Us</a></li>
+			</ul>
+		</nav>
+	</header> 
+
+
+
+
+
+
+
+
+
+
+
+<div class ="container container-item-selection">
+	<div class="row justify-content-center">
+		<div class="col-xl-12">
 			<h3>ADD TO DONATION BAG</h3>
 		</div>
 </div>
@@ -60,7 +101,7 @@
 <button class ="btn btn-success add-to-cart" data-name="Cleaning & Hygiene">ADD TO BAG</button>
 </td>
 </tr><tr>
-<td>Hand Sanitizer & Mask</td>
+<td>Hand Sanitizer and Mask</td>
 <td>
 <button class ="btn btn-success add-to-cart" data-name="Hand Sanitizer & Mask">ADD TO BAG</button>
 </td>
@@ -85,7 +126,13 @@
 </table>
 </div>
  
+            
+
+ <div class="row" style="text-align:left;">
+        <div class="col-xl-12">
              <button class="btn btn-danger" id="clear-cart">Clear Bag</button>
+         </div>
+        </div>
 
 
         <div class="row justify-content-center">
@@ -96,7 +143,7 @@
             </div>
             </div>
             <div class="row">
-            <div class="col-12-xl">You have <span id="count-cart">X</span> items in your Bag</div>
+            <div class="col-12-xl"><h3>You have <span id="count-cart">X</span> items in your Bag</h3></div>
         </div>
  </div>
  
@@ -129,8 +176,6 @@
                         +"<input class='item-count' type='number' data-name='"
                         +cartArray[i].name
                         +"' value='"+cartArray[i].count+"' >"
-                        +" <button class='btn btn-dark plus-item' data-name='"
-                        +cartArray[i].name+"'>+</button>"
                         +" <button class='btn btn-dark subtract-item' data-name='"
                         +cartArray[i].name+"'>-</button>"
                         +" <button class=' btn btn-warning delete-item' data-name='"
@@ -174,8 +219,51 @@
         
         
         <footer>
-        <a href='proceed.jsp'><button>CONFIRM</button></a>
+        
+         <div class="row" style="text-align:center;margin:100px 0px 100px 0px">
+        <div class="col-xl-12">
+                <a href='proceed.jsp'><button class="btn btn-primary">Confirm</button></a>
+         </div>
+        </div>
         </footer>
+ 
+ 
+	<div class="footer-dark">
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-3 item">
+						<h3>Services</h3>
+						<ul>
+							<li><a href="#">Book Donate</a></li>
+							<li><a href="#">Food Donate</a></li>
+							<li><a href="#">Clothes Donate</a></li>
+							<li><a href="#">Money Donate</a></li>
+							<li><a href="#">Stationery Donate</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-md-3 item">
+						<h3>About</h3>
+						<ul>
+							<li><a href="#">Company</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Volunteer</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 item-text" style="margin-left: -60px">
+						<h3>Donation Website</h3>
+						<p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+					</div>
+					<div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+				</div>
+				<div>
+				<p class="copyright"><b>During the Coronavirus crisis donate essential items to support the ones in need </p></b>
+				<center> <a href='donatenow.jsp'><button class="btn btn-primary" style=":hover{padding:0px;}">PROCEED</button></a></center>
+			</div>
+			</div>
+		</footer>
+	</div>
+ 
  
 </body>
 </html>

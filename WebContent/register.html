@@ -3,10 +3,117 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" type="text/css" rel="stylesheet">
+	<link href="Assets/css/main.css" rel="stylesheet" type="text/css">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
+
+.back_wrapper {
+  height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(47deg , white ,#e0cecf, #a96a2c);
+*/
+}
+
+.form-box {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #fff;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 3px #655c5c;
+  border-radius:10px;
+}
+
+.button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+    box-shadow: 0px 4px 6px 0px #4a3b54;
+    border-radius: 30px;
+    font-size: 31px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    display:flex;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #bb7a57, #f3e2eb);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+background: linear-gradient(to right, #eadde4, #c3886c);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.check-box {
+  margin: 30px 10px 30px 0;
+}
+
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+
+#login {
+  left: 50px;
+}
+
+#register {
+  left: 450px;
+}
+
 .heading {
 	text-align: center;
     font-family: serif;
@@ -15,187 +122,152 @@ body {
     text-shadow: 0px 2px 4px #172323;
 }
 
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  display: inline-block;
-    margin-right: 150px;
-    text-align: center;
-    margin-left: 160px;
-}
-
-.flip-card-inner {
-  position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    /* border: 4px solid blue; */
-    border-radius: 150px;
-    transition: transform 0.6s;
-    /* overflow: hidden; */
-    transform-style: preserve-3d;
-    box-shadow: 0px 10px 5px 1px rgb(66 58 58);
-}
-.avtar {
-
-width: 289px;
-    height: 295px;
-    /* overflow: hidden; */
-    border-radius: 150px;
-    /* text-align: center; */
-
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
-  border-radius: 30px;
-  color: white;
-  transform: rotateY(180deg);
-}
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
-
-.input-field {
-  width: 100%;
-  padding: 10px;
-  outline: none;
-}
-
-.input-field:focus {
-  border: 2px solid dodgerblue;
-}
-
-/* Set a style for the submit button */
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.btn:hover {
-  opacity: 1;
-}
 </style>
 </head>
 <body>
-<h1 class="heading">JOIN US </h1>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img class="avtar" src="Assets/img/registersave.jpg" alt="Avatar">
+
+    
+  <header class="header"> 
+		
+	 <nav>
+			<ul>
+				<li><a class="nav-ref" href="Index.jsp">Home</a></li>
+				<li><a class="nav-ref" href="contact.jsp">Contact us</a></li>
+				<li><a  class="nav-ref" href="donatenow.jsp">Donate Now</a></li>
+				
+				<li><a class="nav-ref" href="register.html">Join Us</a></li>
+			</ul>
+		</nav>
+	</header> 
+     
+
+
+
+<!-- 
+New Register and login Module 
+ -->
+ 
+ <div class="back_wrapper">
+ <h1 class="heading">JOIN US </h1>
+ 
+  <div class="form-box">
+    <div class="div button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+      <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      
     </div>
-    <div class="flip-card-back">
-    
-      <form action="register.jsp" method="post">
-    
-  <h2>Register Form</h2>
-  <div class="input-container">
+
+
+
+<!-- 
+
+ <form action="NewFile.jsp">
+ 
     <i class="fa fa-user icon"></i>
     <input class="input-field" type="text" placeholder="Username" name="usrnm">
-  </div>
-  <div class="input-container">
+  
+
+ 
     <i class="fa fa-envelope icon"></i>
     <input class="input-field" type="text" placeholder="Email" name="email">
-  </div>
-  
-  <div class="input-container">
-    <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="psw">
-  </div>
-
-  <button type="submit" class="btn">Register</button>
-</form>
-    </div>
-  </div>
-</div>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img class="avtar" src="Assets/img/loginsave.jpg" alt="Avatar" style="width: 260px;
-    height: 260px;">
-    </div>
-    <div class="flip-card-back">
-      <form action="NewFile.jsp" style="max-width:500px;margin:auto">
-  <h2>Login Form</h2>
-  <div class="input-container">
-    <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Username" name="usrnm">
-  </div>
-
-  <div class="input-container">
-    <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" placeholder="Email" name="email">
-  </div>
   
   
-  <div class="input-container">
+  
+  
     <i class="fa fa-key icon"></i>
     <input class="input-field" type="password" placeholder="Password" name="psw">
     <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-  </div>
+ 
 
   <button type="submit" class="btn">LOGIN</button>
 </form>
 
-    </div>
+ -->
+
+
+    <form  action="NewFile.jsp" id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="Username" name="usrnm" required>
+      <input type="password" class="input-field" placeholder="Password" name="psw" required>
+      <input type="checkbox" class="check-box"><span>Remember Password</span>
+      <button class="submit-btn" type="submit">Log In</button>
+    </form>
+
+
+
+
+<!-- 
+
+
+     <form action="register.jsp" method="post">
+    
+  <h2>Register Form</h2>
+  
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  
+  
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  
+  
+  
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  
+
+  <button type="submit" class="btn">Register</button>
+</form>
+ 
+
+    
+
+ -->
+
+
+
+    <form action="register.jsp" method="post" id="register" class="input-group">
+      <input type="text" class="input-field" placeholder="Username" name="usrnm" required>
+      <input type="email" class="input-field" placeholder="Email" name="email" required>
+      <input type="password" class="input-field" placeholder="Password" name="psw" required>
+      <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+      <button class="submit-btn" type="submit">Register</button>
+    </form>
   </div>
 </div>
-</body>
+    
 
+<div class="container">
+<div class="row "  style="text-align:center; margin:30px 0px">
+	<div class="col-xl-12">
+				<a href="Admin/admin.jsp" style="color:black;font-size:20px;font-family:serif;text-decoration: underline;">Are you an Admin ? Click here !</a>
+	</div>
+</div>
+</div>
+<script>
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
 
+function register() {
+  x.style.left = "-400px";
+  y.style.left = "50px";
+  z.style.left = "110px";
+}
 
+function login() {
+  x.style.left = "50px";
+  y.style.left = "450px";
+  z.style.left = "0px";
+}
 
+function admin() {
+	  x.style.left = "50px";
+	  y.style.left = "450px";
+	  z.style.left = "0px";
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 
 
